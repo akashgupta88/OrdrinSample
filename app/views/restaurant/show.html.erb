@@ -1,0 +1,22 @@
+<h1>Restaurant Details</h1>
+<p><%= @restaurant["na"] %></p>
+
+
+<table style="border-collapse: collapse;">
+	<tr>
+    	<th>ID</th>
+    	<th>Name</th>
+    	<th>Description</th>
+    	<th>Price</th>
+    	<th>Orderable</th>
+  	</tr>
+	<% @menu.each do |item| %>
+    	<tr>
+      		<td><%= item["id"] %></td>
+     		<td><%= item["name"] %></td>
+      		<td><%= item["descrip"] %></td>
+      		<td><%= item["price"].to_s %></td>
+      		<td><%= item["is_orderable"] %></td>
+    	</tr>
+ 	<% end %>
+</table>

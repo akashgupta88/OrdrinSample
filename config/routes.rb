@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'restaurant/index'
+
+  get 'restaurant/show'
+
+  get 'rastaurant/index'
+
+  get 'rastaurant/show'
+
   get 'welcome/index'
 
   devise_for :users

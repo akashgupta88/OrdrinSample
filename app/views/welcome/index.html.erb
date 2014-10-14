@@ -1,18 +1,29 @@
 <h1>Welcome to the OrdrIn Sample</h1>
+<h2>Please enter your address:</h2>
 
-<%= form_for :article do |f| %>
+<%= form_tag(restaurant_index_path, method: 'get') do %>
   <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= label_tag "Street" %>
+    <%= text_field_tag :street_address %>
   </p>
- 
   <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
+    <%= label_tag "City" %>
+    <%= text_field_tag :city %>
   </p>
- 
   <p>
-    <%= f.submit %>
+    <%= label_tag "State" %>
+    <%= text_field_tag :state %>
+  </p>
+  <p>
+    <%= label_tag "Zip" %>
+    <%= text_field_tag :zip %>
+  </p>
+  <p>
+    <%= label_tag "Phone" %>
+    <%= text_field_tag :phone %>
+  </p>
+  <p>
+    <%= submit_tag "Search" %>
   </p>
 <% end %>
 

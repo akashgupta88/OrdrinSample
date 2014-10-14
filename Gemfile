@@ -39,4 +39,5 @@ gem 'spring',        group: :development
 
 gem "devise"
 gem "bson_ext"
-gem "mongoid", ">= 2.0.0.beta.19"
+gem "mongoid"
+gem "ordrin"

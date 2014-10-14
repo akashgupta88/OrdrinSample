@@ -1,0 +1,28 @@
+
+
+<h1>Restaurant List</h1>
+
+<h2><%= @address %></h2> <br>
+
+<table style="border-collapse: collapse;">
+	<tr>
+    	<th>ID</th>
+    	<th>Name</th>
+    	<th>Phone</th>
+    	<th>Address</th>
+    	<th>City</th>
+  	</tr>
+	<% @delivery_list.each do |restaurant| %>
+    	<tr>
+      		<td><%= restaurant["id"] %></td>
+     		<td><%= restaurant["na"] %></td>
+      		<td><%= restaurant["cs_phone"] %></td>
+      		<td><%= restaurant["addr"] %></td>
+      		<td><%= restaurant["city"] %></td>
+      		<td><%= link_to "Show Menu", restaurant_show_path(restaurant["id"]) %></td>
+    	</tr>
+ 	<% end %>
+</table>
+
+<br>
+<%= link_to "Back to Search Options", welcome_index_path%>
