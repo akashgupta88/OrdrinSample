@@ -23,6 +23,8 @@ class RestaurantController < ApplicationController
 
   	puts @delivery_list
   	puts @delivery_list.count
+
+    render :json => @delivery_list
   end
 
   def show
